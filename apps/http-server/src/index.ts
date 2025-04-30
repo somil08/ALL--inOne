@@ -6,6 +6,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
+
 app.post('/signup', async(req, res) => {
 
   const username = req.body.username;
@@ -23,4 +24,4 @@ app.post('/signup', async(req, res) => {
 });
 app.listen(3002), () => {
   console.log('Server is running on http://localhost:3000');
-} 
+}
