@@ -1,5 +1,5 @@
 {
-  "name": "http-server",
+  "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "devDependencies": {
     "@repo/db": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/cors": "^2.8.18"
+    "@types/cors": "^2.8.18",
+    "typescript": "^5.3.3"
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { client } from "@repo/db/client";
+import { client } from "../../../packages/db/src";
 
 const app = express();
 app.use(cors()); // allow cross-origin requests
