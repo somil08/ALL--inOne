@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'apps/backend/**'
+      - 'packages/**'           # optional, if shared code affects backend
+      - 'docker/Dockerfile.backend'
+      - 'pnpm-lock.yaml'        # if used in Docker
 
 jobs:
   build-and-deploy:

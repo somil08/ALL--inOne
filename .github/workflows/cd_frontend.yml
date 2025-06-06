@@ -1,7 +1,14 @@
 name: Deploy the frontend
+
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'apps/frontend/**'
+      - 'packages/**'           # optional, if shared code affects frontend
+      - 'docker/Dockerfile.frontend'
+      - 'pnpm-lock.yaml'        # if you use this in Docker
+
 jobs: 
   build:
     runs-on: ubuntu-latest
