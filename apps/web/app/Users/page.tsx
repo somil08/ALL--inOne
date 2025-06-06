@@ -1,8 +1,24 @@
-import type { User } from '@prisma/client';
-import { client } from '@repo/db/client';
+'use client';
 
-export default async function UsersPage() {
-  const users: User[] = await client.user.findMany();
+import { useEffect, useState } from 'react';
+
+type User = {
+  id: number;
+  username: string;
+  password: string;
+};
+
+export default function UsersPage() {
+  const [users, setUsers] = useState<User[]>([]);
+
+  useEffect(() => {
+    async function fetchUsers() {
+      const res = await fetch('/api/users');
+      const data = await res.json();
+      setUsers(data);
+    }
+    fetchUsers();
+  }, []);
 
   return (
     <div className="p-6">
