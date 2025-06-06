@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'apps/frontend/**'
+      - 'apps/web/**'
       - 'packages/**'           # optional, if shared code affects frontend
       - 'docker/Dockerfile.frontend'
       - 'pnpm-lock.yaml'        # if you use this in Docker
