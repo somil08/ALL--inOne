@@ -23,4 +23,4 @@ jobs:
           build-args:
             - DATABASE_URL=${{ secrets.DATABASE_URL }}
           push: true
-          tags: 100xdevs/web-frontend:${{ github.sha }}
+          tags: somilrathore/web-frontend:${{ github.sha }}

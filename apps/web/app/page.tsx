@@ -67,7 +67,7 @@ export default function Home() {
 
       {response && (
         <div className="mt-6 bg-gray-100 p-4 rounded">
-          <h2 className="font-semibold">HTTP Response:</h2>
+          <h2 className="font-semibold">HTTP server Response:</h2>
           <pre>{response}</pre>
         </div>
       )}
