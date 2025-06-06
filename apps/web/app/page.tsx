@@ -73,7 +73,7 @@ export default function Home() {
       )}
 
       <div className="mt-6 bg-green-100 p-4 rounded">
-        <h2 className="font-semibold">Websocket-server Message:</h2>
+        <h2 className="font-semibold">WS-server Message:</h2>
         <p>{wsMessage}</p>
       </div>
     </main>
