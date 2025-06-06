@@ -12,6 +12,7 @@ on:
 jobs: 
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
@@ -21,13 +22,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      
-      - name: Build and push 
+
+      - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: .
           file: ./docker/Dockerfile.frontend
-          build-args:
-            DATABASE_URL: ${{ secrets.DATABASE_URL }}
           push: true
           tags: somilrathore/web-frontend:${{ github.sha }}
+          build-args: |
+            DATABASE_URL=${{ secrets.DATABASE_URL }}
