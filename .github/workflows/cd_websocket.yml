@@ -19,6 +19,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker/Dockerfile.websocket
+          file: ./docker/Dockerfile.ws-server
           push: true
           tags: somilrathore/websocket:${{ github.sha }}
