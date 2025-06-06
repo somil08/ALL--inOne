@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "@repo/db": "workspace:*",
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "^5.8.2"
   },
   "keywords": [],
   "author": "",

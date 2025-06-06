@@ -22,6 +22,31 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
+  apps/backend:
+    dependencies:
+      '@types/express':
+        specifier: ^5.0.1
+        version: 5.0.2
+      cors:
+        specifier: ^2.8.5
+        version: 2.8.5
+      express:
+        specifier: ^5.1.0
+        version: 5.1.0
+    devDependencies:
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../../packages/db
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@types/cors':
+        specifier: ^2.8.18
+        version: 2.8.18
+      typescript:
+        specifier: ^5.3.3
+        version: 5.8.2
+
   apps/http-server:
     dependencies:
       '@types/express':
@@ -102,6 +127,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+      typescript:
+        specifier: ^5.8.2
+        version: 5.8.2
 
   packages/db:
     dependencies:
