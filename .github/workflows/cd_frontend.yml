@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./docker/Dockerfile.frontend
+          file: ./docker/Dockerfile.ws-server
           push: true
           tags: somilrathore/web-frontend:${{ github.sha }}
           build-args: |
