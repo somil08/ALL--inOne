@@ -1,0 +1,10 @@
+// tsconfig.json (root-level)
+{
+    "files": [],
+    "references": [
+      { "path": "apps/backend" },
+      { "path": "packages/db" },
+      { "path": "packages/typescript-config" }
+    ]
+  }
+  
