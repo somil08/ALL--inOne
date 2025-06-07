@@ -19,9 +19,6 @@ RUN pnpm install --frozen-lockfile
 # Run prisma generate in the right directory
 RUN pnpm --filter @repo/db prisma generate --schema=./packages/db/prisma/schema.prisma
 
-# Build the entire monorepo project using turbo or pnpm build
-RUN pnpm build
-
 # Expose your app port
 EXPOSE 3002
 
