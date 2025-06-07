@@ -1,22 +1,29 @@
 FROM node:18-alpine
 
+# Set working directory
 WORKDIR /usr/src/app
 
-COPY package.json .
-COPY pnpm-lock.yaml .
-COPY turbo.json .
+# Copy only package manager files first for caching
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json ./
 
+# Copy all source files
 COPY packages ./packages
 COPY apps ./apps
 
-RUN npm install -g pnpm && pnpm install --frozen-lockfile
+# Install pnpm globally (optional but recommended)
+RUN npm install -g pnpm
 
-# Generate Prisma client
-RUN npx prisma generate --schema=./packages/db/prisma/schema.prisma
+# Install dependencies (monorepo aware)
+RUN pnpm install --frozen-lockfile
 
-# Build the project (this must be defined in your scripts)
+# Run prisma generate in the right directory
+RUN pnpm --filter @repo/db prisma generate --schema=./packages/db/prisma/schema.prisma
+
+# Build the entire monorepo project using turbo or pnpm build
 RUN pnpm build
 
+# Expose your app port
 EXPOSE 3002
 
+# Start your backend app
 CMD ["node", "apps/backend/dist/index.js"]
