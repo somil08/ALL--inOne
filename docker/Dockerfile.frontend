@@ -3,33 +3,36 @@ FROM node:18-alpine
 WORKDIR /usr/src/app
 
 ARG DATABASE_URL
-ARG NEXT_PUBLIC_API_URL
+ENV DATABASE_URL=${DATABASE_URL}
 
-ENV DATABASE_URL=$DATABASE_URL
-ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
-
-# Enable pnpm
+# Set up global bin directory for pnpm
 ENV PNPM_HOME=/usr/local/pnpm
 ENV PATH=$PNPM_HOME:$PATH
 
-# Install pnpm and Turbo
+# Install pnpm
 RUN npm install -g pnpm
 
-# Copy workspace files
+# Create the directory manually
+RUN mkdir -p $PNPM_HOME
+
+# Copy root workspace files
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
-# Copy the code
+# Copy monorepo folders
 COPY packages ./packages
 COPY apps ./apps
 
-# Install deps
+# Install all dependencies
 RUN pnpm install
 
-# Generate Prisma Client
-RUN pnpm --filter db exec prisma generate
+# Install Prisma CLI globally
+RUN pnpm add -g prisma
 
-# Build frontend app
-RUN pnpm turbo run build --filter=web
+# Generate Prisma client
+RUN npx prisma generate --schema=./packages/db/prisma/schema.prisma
+
+# Build web app
+RUN pnpm --filter web run build
 
 EXPOSE 3000
 
