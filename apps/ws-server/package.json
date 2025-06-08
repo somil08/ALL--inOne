@@ -10,6 +10,9 @@
   "devDependencies": {
     "@repo/db": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.14.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.2"
   },
   "keywords": [],
@@ -17,7 +20,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@types/ws": "^8.18.1",
-    "ws": "^8.18.1"
+    "ws": "^8.18.2"
   }
 }
