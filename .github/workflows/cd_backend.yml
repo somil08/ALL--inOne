@@ -6,9 +6,9 @@ on:
       - main
     paths:
       - 'apps/backend/**'
-      - 'packages/**'           # optional, if shared code affects backend
+      - 'packages/**'          
       - 'docker/Dockerfile.backend'
-      - 'pnpm-lock.yaml'        # if used in Docker
+      - 'pnpm-lock.yaml'       
 
 jobs:
   build-and-deploy:

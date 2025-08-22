@@ -10,6 +10,8 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
+// testing
+
 // User signup endpoint
 app.post('/signup', (req: Request, res: Response, next: NextFunction) => {
   const { username, password } = req.body;
