@@ -1,84 +1,81 @@
-# Turborepo starter
+# 🧩 ALL-InOne
 
-This Turborepo starter is maintained by the Turborepo core team.
+ALL-InOne is a **modular full-stack platform** that combines a **real-time chat system** and a **blog application** into a single scalable interface.
 
-## Using this example
+The project is built using a **Turborepo monorepo architecture** and focuses on maintainability, scalability, and DevOps automation.
 
-Run the following command:
+---
 
-```sh
-npx create-turbo@latest
-```
+## 🚀 Features
 
-## What's inside?
+- 💬 Real-time Chat using WebSockets
+- 📝 Blog Platform with MySQL persistence
+- 🧩 Monorepo Architecture (Turborepo)
+- 🔄 Modular Microservices
+- ⚙️ Prisma ORM for structured DB access
+- 🐳 Dockerized Services
+- 🚀 CI/CD with GitHub Actions
+- 📦 SHA-based Docker Image Tagging
+- ⏱️ 60% Faster Deployments
 
-This Turborepo includes the following packages/apps:
+---
 
-### Apps and Packages
+## 🧠 Tech Stack
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+**Frontend**
+- Next.js
+- TypeScript
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+**Backend**
+- Node.js
+- MySQL
+- Prisma ORM
+- WebSockets
 
-### Utilities
+**DevOps**
+- Docker
+- GitHub Actions
+- DockerHub
+- Turborepo (Monorepo)
 
-This Turborepo has some additional tools already setup for you:
+---
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## 🏗️ Architecture Highlights
 
-### Build
+- Monorepo with shared configs and packages
+- Independent services for chat and blog
+- Automated CI/CD pipeline
+- Versioned container builds
+- Production-ready deployment flow
 
-To build all apps and packages, run the following command:
+---
 
-```
-cd my-turborepo
-pnpm build
-```
+## 🛠️ Key Learnings
 
-### Develop
+- Managing large codebases with monorepos
+- Real-time communication using WebSockets
+- Database modeling with Prisma
+- CI/CD automation & release optimization
+- Container-based microservices
 
-To develop all apps and packages, run the following command:
+---
 
-```
-cd my-turborepo
-pnpm dev
-```
+## 📌 Use Cases
 
-### Remote Caching
+- Community platforms
+- SaaS dashboards
+- Messaging + content platforms
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+---
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+## 📄 Status
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+🚀 Actively maintained and optimized for scalability.
 
-```
-cd my-turborepo
-npx turbo login
-```
+---
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## 👤 Author
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turborepo.com/docs/core-concepts/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+**Somil Rathore**  
+B.Tech IT @ IIIT Bhopal  
+Full-Stack & Cloud Engineer
